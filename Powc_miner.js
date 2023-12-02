@@ -5,7 +5,7 @@ const ethers = require('ethers');
 // Set up your Polygon node information for connecting to the Polygon network
 const provider = new ethers.providers.JsonRpcProvider('Polygon_network_RPC');
 // Your smart contract address and private key
-const contractAddress = '0xB9B35b3B06ceB533b4d2d0881A8ec3bE0ACf876A';
+const contractAddress = '0x4b7e197e8b6807c4ffb52ca7f0b56095d03c0b47';
 const privateKey = 'your_private_key'; // Replace with your private key
 
 // Read the ABI (Application Binary Interface) of the smart contract

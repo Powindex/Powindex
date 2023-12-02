@@ -99,7 +99,12 @@ Before running the script, you need to configure the necessary parameters:
 Open the Powc_miner.js file in a text editor.
 
 Enter your private key and Polygon RPC address in the designated places.
-
+Important Notes
+Security: Handle your private key and sensitive information with utmost care. Never store your private key in any public code repository or other publicly accessible places.
+```bash
+const privateKey = 'your_private_key'; // Replace with your private key
+const provider = new ethers.providers.JsonRpcProvider('Polygon_network_RPC');
+```
 Warning: Never share or commit your private key in any public repository.
 
 Running the Script
@@ -110,12 +115,7 @@ node Powc_miner.js
 ```
 The script will begin to operate based on the configuration you've set.
 
-Important Notes
-Security: Handle your private key and sensitive information with utmost care. Never store your private key in any public code repository or other publicly accessible places.
-```bash
-const privateKey = 'your_private_key'; // Replace with your private key
-const provider = new ethers.providers.JsonRpcProvider('Polygon_network_RPC');
-```
+
 Testing: It is recommended to conduct thorough testing on a test network before connecting to the main network and performing actual transactions.
 Support and Contributions
 If you encounter any issues or would like to contribute to the code, please submit issues or pull requests through the project's Issues page.

@@ -14,11 +14,13 @@ To create a distributed index system based on Ethereum inscriptions, utilizing P
 ### 2.2 Smart Contract
 The smart contract on Ethereum manages challenge code generation, answer submission, and initial POWC distribution. Later, it will determine which inscriptions can be engraved in the distributed index, based on first correct answer submissions.
 
+
 ### 2.3 POWC Token
-- Initially rewarding users solving challenge codes, POWC evolves to allow holders to partake in inscription-related decisions.
-- Contract address: 0x4b7e197e8b6807c4ffb52ca7f0b56095d03c0b47
+- Initially rewarding users for solving challenge codes, POWC evolves to allow holders to partake in inscription-related decisions.
+Contract address: 0x4b7e197e8b6807c4ffb52ca7f0b56095d03c0b47
 - Deployment network: Polygon
-- nitial Reward Mechanism: POWC tokens were initially developed as a reward mechanism to reward users who successfully solve complex algorithmic challenges or verification efforts. This incentive method encourages more participants to invest in the calculation and verification of the system.
+- Total Supply: The total supply of POWC tokens is 21,000,000.
+- Initial Reward Mechanism: POWC tokens were initially developed as a reward mechanism to reward users who successfully solve complex algorithmic challenges or verification efforts. This incentive method encourages more participants to invest in the calculation and verification of the system.
 - Governance participation: As the POWC ecosystem develops, holders can now participate in more decisions about the token ecology. This may include voting on the project's future path, funding allocations, and other key governance decisions.
 ## 3. Features
 ### 3.1 Mining Program

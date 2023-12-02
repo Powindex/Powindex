@@ -56,22 +56,7 @@ Later stages focus on inscription engraving. The first miner with the correct an
 ## 6. Conclusion
 PoWIndex combines blockchain technology with a Proof of Work mechanism to create a decentralized, secure, and fair distributed index for Ethereum inscriptions.
 
-# Powindex Script Installation and Usage Guide
 
-The Powindex script is a Node.js-based tool for interacting with the Polygon network. This guide will walk you through the steps of installing the necessary environment, configuring the script, and running it.
-
-## Prerequisites
-
-Before you start, make sure you have the following software installed on your computer:
-
-- Node.js
-- npm (Node.js package manager, usually installed with Node.js)
-
-If you haven't installed these tools yet, visit the [Node.js official website](https://nodejs.org/) to download and install the latest version of Node.js, which will also install npm.
-
-## Cloning the Repository
-
-To get started, clone the Powindex repository to your local machine. Open your command line tool and run the following command:
 
 # Powindex Script Installation and Usage Guide
 

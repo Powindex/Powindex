@@ -37,7 +37,7 @@ The goal is to find a nonce that produces a hash meeting the specific criteria s
 
 Once a valid nonce is found and the corresponding hash meets the contract’s criteria, the mining program submits this answer (the nonce) to the smart contract.
 This submission is a transaction on the blockchain, where the nonce is used as proof that the miner has completed the required computational work.
-3.2 Smart Contract
+
 ### 3.6 Challenge Code Generation
 
 The smart contract is responsible for generating and updating the challenge code.

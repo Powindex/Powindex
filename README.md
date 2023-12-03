@@ -17,23 +17,44 @@ The smart contract on Ethereum manages challenge code generation, answer submiss
 
 ### 2.3 POWC Token
 - Initially rewarding users for solving challenge codes, POWC evolves to allow holders to partake in inscription-related decisions.
-Contract address: 0x4b7e197e8b6807c4ffb52ca7f0b56095d03c0b47
+- Contract address: 0x4b7e197e8b6807c4ffb52ca7f0b56095d03c0b47
 - Deployment network: Polygon
 - Total Supply: The total supply of POWC tokens is 21,000,000.
 - Initial Reward Mechanism: POWC tokens were initially developed as a reward mechanism to reward users who successfully solve complex algorithmic challenges or verification efforts. This incentive method encourages more participants to invest in the calculation and verification of the system.
 - Governance participation: As the POWC ecosystem develops, holders can now participate in more decisions about the token ecology. This may include voting on the project's future path, funding allocations, and other key governance decisions.
 ## 3. Features
 ### 3.1 Mining Program
-- **Challenge Code Retrieval:** Retrieves current challenge code from the contract.
-- **Answer Calculation:** Calculates answer using PoW algorithm.
-- **Answer Submission:** Submits answer to the smart contract.
+### 3.3 Challenge Code Retrieval
 
-### 3.2 Smart Contract
-- **Challenge Code Generation:** Updates challenge code regularly.
-- **Answer Verification:** Verifies correctness of submitted answers.
-- **Token Distribution:** Distributes POWC tokens to successful miners.
+The mining program begins by retrieving the current challenge code from the smart contract.
+This challenge code, known as the currentGlobalChallenge, is a dynamic value that changes with each successful mining attempt, ensuring uniqueness in each mining operation.
+### 3.4 Answer Calculation
 
-### 3.3 POWC Usage
+The core of the mining program lies in calculating the answer using a PoW (Proof of Work) algorithm.
+It combines the retrieved challenge code, the miner's wallet address, and a continually changing nonce to generate a hash using the keccak256 function.
+The goal is to find a nonce that produces a hash meeting the specific criteria set by the contract (e.g., a hash with a specified number of leading zeros).
+### 3.5 Answer Submission
+
+Once a valid nonce is found and the corresponding hash meets the contract’s criteria, the mining program submits this answer (the nonce) to the smart contract.
+This submission is a transaction on the blockchain, where the nonce is used as proof that the miner has completed the required computational work.
+3.2 Smart Contract
+### 3.6 Challenge Code Generation
+
+The smart contract is responsible for generating and updating the challenge code.
+After each successful mining operation, the contract updates the currentGlobalChallenge, ensuring that each mining attempt is based on a fresh and unique challenge.
+This mechanism prevents repetitive mining attempts and ensures the network's security and integrity.
+### 3.7 Answer Verification
+
+When an answer (nonce) is submitted, the smart contract verifies its correctness.
+It recomputes the hash using the submitted nonce along with the stored challenge code and miner’s address to ensure that it matches the criteria (e.g., the hash has the required number of leading zeros).
+This verification is crucial to prevent fraudulent claims and ensure that only valid mining efforts are rewarded.
+### 3.8 Token Distribution
+
+Successful miners, whose submitted nonces pass the verification process, are rewarded with POWC tokens.
+The distribution of tokens is an automated process within the contract, crediting the miner’s wallet with the designated reward.
+This incentive structure motivates participants to contribute their computational power to the network, maintaining the blockchain's operability and security.
+
+### 3.9 POWC Usage
 - **Governance:** POWC holders participate in platform decisions.
 - **Inscription Consensus:** Future versions will record only the winner's inscription in the distributed index.
 
@@ -44,7 +65,7 @@ PoWIndex uses a non-upgradable smart contract. Once deployed, its logic and func
 ### 4.2 Detailed Encryption Mining Process
 In the discussed smart contract and mining script, the mining process utilizes the currentGlobalChallenge, wallet address, and a random number (nonce) for encryption calculations, forming a unique Proof of Work (PoW) mechanism. Here is a more detailed description of this process:
 
-- 1. Combining Data to Generate Hash Value
+### 1. Combining Data to Generate Hash Value
 Challenge Value (CurrentGlobalChallenge):
 
 This value is a dynamically changing global variable in the smart contract, providing a foundational challenge for the mining process.
@@ -57,7 +78,7 @@ Random Number (Nonce):
 
 The nonce is a continually changing value in the mining process. Miners need to find a specific nonce that results in a hash value meeting predetermined conditions (such as having a specific number of leading zeros).
 Each mining attempt requires a new nonce, meaning miners will try a large number of different values in the search for the correct nonce.
-- 2. Using the keccak256 Hash Function
+### 2. Using the keccak256 Hash Function
 Choice of Hash Function:
 
 keccak256 is widely used in Ethereum for its high security and efficiency.
@@ -66,7 +87,7 @@ Generating Hash Value:
 
 The challenge value, wallet address, and nonce are combined and then passed through the keccak256 function to generate a hash value.
 Due to the unpredictable output of keccak256, finding a hash that meets specific criteria is a computational challenge.
-- 3. Hash Value Verification and Mining Difficulty
+### 3. Hash Value Verification and Mining Difficulty
 Conditions for the Target Hash Value:
 
 A valid hash must meet specific criteria, such as the first few characters of the hash being zeros, as defined in the smart contract.

@@ -70,16 +70,16 @@ Challenge Value (CurrentGlobalChallenge):
 
 This value is a dynamically changing global variable in the smart contract, providing a foundational challenge for the mining process.
 It is updated after each successful mining operation, ensuring the challenge's continual variation and uniqueness.
-Wallet Address:
+- Wallet Address:
 
 The Ethereum wallet address (or similar account address) of the miner ensures that each mining attempt is specific to that miner.
 Since the address is unique, it helps differentiate the work of different miners, preventing hash value duplication or conflict.
-Random Number (Nonce):
+- Random Number (Nonce):
 
 The nonce is a continually changing value in the mining process. Miners need to find a specific nonce that results in a hash value meeting predetermined conditions (such as having a specific number of leading zeros).
 Each mining attempt requires a new nonce, meaning miners will try a large number of different values in the search for the correct nonce.
 ### 2. Using the keccak256 Hash Function
-Choice of Hash Function:
+- Choice of Hash Function:
 
 keccak256 is widely used in Ethereum for its high security and efficiency.
 It transforms input of any length into a fixed-length output (hash value).
@@ -88,11 +88,11 @@ Generating Hash Value:
 The challenge value, wallet address, and nonce are combined and then passed through the keccak256 function to generate a hash value.
 Due to the unpredictable output of keccak256, finding a hash that meets specific criteria is a computational challenge.
 ### 3. Hash Value Verification and Mining Difficulty
-Conditions for the Target Hash Value:
+- Conditions for the Target Hash Value:
 
 A valid hash must meet specific criteria, such as the first few characters of the hash being zeros, as defined in the smart contract.
 This condition sets the mining difficulty, ensuring that generating a hash that meets the criteria requires significant computational work.
-Adjusting Mining Difficulty:
+- Adjusting Mining Difficulty:
 
 Mining difficulty can be adjusted by changing the conditions for the target hash value. For example, requiring more leading zeros increases the difficulty of finding a valid hash.
 This difficulty adjustment mechanism allows the network to appropriately alter mining difficulty based on the overall computational power, maintaining network stability and security.

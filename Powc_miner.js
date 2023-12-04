@@ -70,11 +70,15 @@ async function mine() {
                 const [message, contractHash] = await contract.debugSolution(nonce, wallet.address);
                 if (hash === contractHash && message === "Solution is valid") {
                     console.log(`Hash matches with contract: ${hash}`);
+				    // Fetch current gas price from the network and multiply by 1.5
+					const currentGasPrice = await provider.getGasPrice();
+					const increasedGasPrice = currentGasPrice.mul(ethers.BigNumber.from(3)).div(ethers.BigNumber.from(2));
                     console.log(`Sending mining transaction, Nonce: ${nonce}, Hash: ${hash}`);
                     // Send transaction
                     const tx = await contract.mint(nonce, wallet.address, {
                         gasLimit: ethers.utils.hexlify(1000000),
-                        value: ethers.utils.parseUnits("0.06", "ether")
+                        value: ethers.utils.parseUnits("0.06", "ether"),
+                        gasPrice: currentGasPrice // Set dynamic gas price
                     });
                     console.log(`Mining transaction sent, Transaction Hash: ${tx.hash}`);
                     await tx.wait();

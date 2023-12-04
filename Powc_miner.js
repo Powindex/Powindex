@@ -22,7 +22,7 @@ const contract = new ethers.Contract(contractAddress, contractABI, wallet);
 
 // Check if a given hash satisfies the mining difficulty requirements
 function isValidHash(hash) {
-    return hash < "0x00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF";
+    return hash < "0x000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF";
 }
 
 // Main mining function

@@ -66,7 +66,7 @@ PoWIndex uses a non-upgradable smart contract. Once deployed, its logic and func
 In the discussed smart contract and mining script, the mining process utilizes the currentGlobalChallenge, wallet address, and a random number (nonce) for encryption calculations, forming a unique Proof of Work (PoW) mechanism. Here is a more detailed description of this process:
 
 ### 1. Combining Data to Generate Hash Value
-Challenge Value (CurrentGlobalChallenge):
+- Challenge Value (CurrentGlobalChallenge):
 
 This value is a dynamically changing global variable in the smart contract, providing a foundational challenge for the mining process.
 It is updated after each successful mining operation, ensuring the challenge's continual variation and uniqueness.

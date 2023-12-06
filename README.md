@@ -172,6 +172,32 @@ node Powc_miner.js
 ```
 The script will begin to operate based on the configuration you've set.
 
+# Multi-Threaded POWC Mining on Polygon Network
+
+This repository contains a Node.js script (`multiThreadedMining.js`) that allows for multi-threaded POWC mining on the Polygon network. It leverages worker threads for parallel mining operations. If you want to start mining using multiple threads, follow the instructions below.
+ Open the multiThreadedMining.js file and replace the following lines with your Polygon RPC URL and wallet private key:
+```bash
+
+const provider = new ethers.providers.JsonRpcProvider('Polygon_network_RPC');
+
+const privateKey = 'your_private_key';
+```
+Inside the for loop in the main function, you can adjust the number of threads according to your computer's performance:
+```bash
+// Start 10 mining threads, each with its own nonce range.
+for (let i = 0; i < 10; i++) {
+    startMiningThread(i * range, range);
+}
+```
+Save the changes to the multiThreadedMining.js file.
+
+Open your terminal and navigate to the project directory.
+
+Run the multi-threaded mining script:
+```bash
+node multiThreadedMining.js
+
+```
 
 Testing: It is recommended to conduct thorough testing on a test network before connecting to the main network and performing actual transactions.
 Support and Contributions

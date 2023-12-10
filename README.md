@@ -22,7 +22,7 @@ The smart contract on Ethereum manages challenge code generation, answer submiss
 - Total Supply: The total supply of POWC tokens is 21,000,000.
 - Initial Reward Mechanism: POWC tokens were initially developed as a reward mechanism to reward users who successfully solve complex algorithmic challenges or verification efforts. This incentive method encourages more participants to invest in the calculation and verification of the system.
 - Governance participation: As the POWC ecosystem develops, holders can now participate in more decisions about the token ecology. This may include voting on the project's future path, funding allocations, and other key governance decisions.
-- Node Certificate NFT: Node Certificate NFTs are presented in NFT form and can be exchanged using POWC tokens. Exchange address: http://destinynode.xyz. These NFTs act as verification credentials between broadcasting nodes and broadcasting contracts, allowing miners to access node domain names from the contract.
+- Node Certificate NFT: Node Certificate NFTs, presented in NFT format, can be exchanged using POWC tokens at the exchange address: [http://destinynode.xyz](http://destinynode.xyz). These NFTs serve as verification credentials between broadcasting nodes and broadcasting contracts, enabling miners to retrieve node domain names from the contract. Additionally, the POWC tokens obtained from the sale of Node Certificate NFTs are initially used to provide liquidity for the token's economy. In the later stages, these accumulated POWC tokens are completely destroyed to regulate the token supply and maintain economic stability.
 ## 3. Features
 ### 3.1 Mining Program
 ### 3.3 Challenge Code Retrieval
